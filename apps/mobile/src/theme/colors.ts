@@ -12,6 +12,8 @@ export const COLORS = {
     surface: '#262626', //background color of the components
     surfaceElevated: '#323232',//background color of the components when elevated , popup , cards element
 
+    greenBackground:'#0c3502',
+
     textPrimary: '#dcdcd8', //main text color
     textSecondary: '#394531', //secondary text color
     textMuted: '#555c50',//lighter text color

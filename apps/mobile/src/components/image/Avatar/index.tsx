@@ -12,18 +12,21 @@ interface AvatarProps {
     border: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
     borderWidth?: number;
     borderColor?: string;
-    padding?: number
+    padding?: number,
+
+    backgroundColor?: string;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
                                            source,
-                                           size = 'sm',
+                                           size = 'xxxl',
                                            radius = 'none',
                                            resizeMode = 'cover',
                                            border = 'none',
                                            borderWidth,
                                            borderColor,
-                                           padding
+                                           padding,
+                                           backgroundColor
                                        }) => {
 
     const getImageContainerStyle = () => {
@@ -51,7 +54,12 @@ const Avatar: React.FC<AvatarProps> = ({
 
     return (
         <View style={getImageContainerStyle()}>
-            <Image style={{width: '100%', height: '100%', borderRadius: radius === 'none' ? 0 : SPACING[radius]}}
+            <Image style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: radius === 'none' ? 0 : SPACING[radius],
+                backgroundColor: backgroundColor
+            }}
                    resizeMode={resizeMode} source={source}/>
         </View>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Dimensions} from "react-native";
-import {COLORS} from "../../theme/colors";
-import {SPACING} from "../../theme/spacing";
+import {COLORS} from "../../../theme/colors";
+import {SPACING} from "../../../theme/spacing";
 import {ArrowRight, Check} from "lucide-react-native";
 import {Gesture, GestureDetector, GestureHandlerRootView} from "react-native-gesture-handler";
 import Animated, {

@@ -1,12 +1,13 @@
 import {View, Text, TouchableOpacity, ScrollView, Image} from "react-native";
 import styles from "../styles/UpcomingBillsViewStyles";
+import globalStyles from "../styles/globalStyles";
 import {Ellipsis} from "lucide-react-native";
 import {COLORS} from "../../../theme/colors";
 import {SPACING} from "../../../theme/spacing";
 import Label from "../../../components/typography/Label";
 import Avatar from "../../../components/image/Avatar";
-import SwipeButton from "../../../components/button";
-
+// import SwipeButton from "../../../components/button";
+import SwipeButton from "../../../components/button/SwipeButton";
 const UpcomingBillsView = () => {
     const bills = [
         {
@@ -29,10 +30,10 @@ const UpcomingBillsView = () => {
 
     return (
         <View>
-            <View style={styles.headerContainer}>
-                <Text style={styles.headerTitle}>
+            <View style={globalStyles.headerContainer}>
+                <Label color={COLORS.white} alignItems={"flex-start"} fontSize={SPACING.xxxl} fontWeight={"bold"}>
                     Upcoming Bills
-                </Text>
+                </Label>
                 <TouchableOpacity style={styles.circleButton}>
                     <Ellipsis size={SPACING.xxl} color={COLORS.white}/>
                 </TouchableOpacity>
@@ -49,7 +50,7 @@ const UpcomingBillsView = () => {
                                         size={"xxxl"}
                                         resizeMode={"cover"} border={"xxl"}/>
                             </View>
-                            <Label type={'simple'} size={'md'} radius={'xxl'}>
+                            <Label type={'simple'} fontSize={SPACING.lg} borderRadius={SPACING.xl} padding={SPACING.sm}>
                                 {bill.dueDate}
                             </Label>
                         </View>
@@ -82,7 +83,7 @@ const UpcomingBillsView = () => {
                                                     size={"xxxl"}
                                                     resizeMode={"cover"} border={"xxl"}/>
                                         </View>
-                                        <Label type={'simple'} size={'md'} radius={'xxl'}>
+                                        <Label type={'simple'} fontSize={SPACING.lg} borderRadius={SPACING.xl} padding={SPACING.sm}>
                                             {bill.dueDate}
                                         </Label>
                                     </View>
