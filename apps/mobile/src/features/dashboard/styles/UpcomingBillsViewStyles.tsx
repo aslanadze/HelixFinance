@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
         gap: SPACING.md
     },
     billCardBodyLabel: {
-        fontSize: SPACING.lg,
+        fontSize: SPACING.md,
         color: COLORS.textMuted,
     },
     billCardBodyPriceText: {
-        fontSize: SPACING.xxl,
+        fontSize: SPACING.xl,
         color: COLORS.white,
     },
     billCardBodyRow2: {
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 
     },
     billCardBodyRow3HeaderTitle: {
-        fontSize: SPACING.xl,
+        fontSize: SPACING.lg,
         fontWeight: '600',
         color: COLORS.dark,
     },

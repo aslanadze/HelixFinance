@@ -31,11 +31,11 @@ const UpcomingBillsView = () => {
     return (
         <View>
             <View style={globalStyles.headerContainer}>
-                <Label color={COLORS.white} alignItems={"flex-start"} fontSize={SPACING.xxxl} fontWeight={"bold"}>
+                <Label color={COLORS.white} alignItems={"flex-start"} fontSize={SPACING.xl} fontWeight={"bold"}>
                     Upcoming Bills
                 </Label>
                 <TouchableOpacity style={styles.circleButton}>
-                    <Ellipsis size={SPACING.xxl} color={COLORS.white}/>
+                    <Ellipsis size={SPACING.lg} color={COLORS.white}/>
                 </TouchableOpacity>
             </View>
             <ScrollView style={styles.billCardScrollView}>
@@ -47,10 +47,10 @@ const UpcomingBillsView = () => {
                                     {bill.title}
                                 </Text>
                                 <Avatar source={bill.avatar} radius={"xxxl"}
-                                        size={"xxxl"}
+                                        size={"xxl"}
                                         resizeMode={"cover"} border={"xxl"}/>
                             </View>
-                            <Label type={'simple'} fontSize={SPACING.lg} borderRadius={SPACING.xl} padding={SPACING.sm}>
+                            <Label type={'simple'} fontSize={SPACING.md} borderRadius={SPACING.xxl} padding={SPACING.sm}>
                                 {bill.dueDate}
                             </Label>
                         </View>
@@ -80,10 +80,10 @@ const UpcomingBillsView = () => {
                                             </Text>
                                             <Avatar source={bill.avatar}
                                                     radius={"xxxl"}
-                                                    size={"xxxl"}
+                                                    size={"xxl"}
                                                     resizeMode={"cover"} border={"xxl"}/>
                                         </View>
-                                        <Label type={'simple'} fontSize={SPACING.lg} borderRadius={SPACING.xl} padding={SPACING.sm}>
+                                        <Label type={'simple'} fontSize={SPACING.sm} borderRadius={SPACING.xl} padding={SPACING.sm}>
                                             {bill.dueDate}
                                         </Label>
                                     </View>

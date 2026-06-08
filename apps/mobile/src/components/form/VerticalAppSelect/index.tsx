@@ -89,7 +89,7 @@ const VerticalAppSelect: React.FC<VerticalAppSelectProps> = ({
                 borderRadius: border.borderRadius,
                 borderWidth: border.borderWidth,
                 borderColor: border.borderColor,
-                padding: SPACING.xs,
+                // padding: 1,
                 height: HEADER_HEIGHT,
                 overflow: 'hidden',
                 zIndex: 99
@@ -104,7 +104,7 @@ const VerticalAppSelect: React.FC<VerticalAppSelectProps> = ({
                             border={"none"}/>
 
                     <Animated.View style={[animatedChevronStyle]}>
-                        <ChevronDown size={SPACING.xxl} color={COLORS.textPrimary}/>
+                        <ChevronDown size={SPACING.xxxl} color={COLORS.textPrimary}/>
 
                     </Animated.View>
                 </Pressable>

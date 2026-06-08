@@ -80,7 +80,7 @@ const TransactionsView = () => {
     ]
     return (
         <View>
-            <Label color={COLORS.white} alignItems={"flex-start"} fontSize={SPACING.xxxl} fontWeight={"bold"}>
+            <Label color={COLORS.white} alignItems={"flex-start"} fontSize={SPACING.xl} fontWeight={"bold"}>
                 Transactions
             </Label>
             <ScrollView contentContainerStyle={transactionsViewStyles.scrollView}>

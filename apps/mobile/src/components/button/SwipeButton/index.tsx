@@ -13,7 +13,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 
-const BUTTON_HEIGHT = SPACING.xxxl * 2;
+const BUTTON_HEIGHT = SPACING.xxl * 2;
 const BUTTON_PADDING = SPACING.lg;
 const HANDLE_SIZE = BUTTON_HEIGHT - BUTTON_PADDING * 2;
 
@@ -88,7 +88,7 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({onSwipeSuccess, text, successT
     return (
         <GestureHandlerRootView style={{
             backgroundColor: COLORS.dark,
-            height: SPACING.xxxl * 1.5,
+            height: SPACING.xxl * 1.5,
             borderRadius: SPACING.xxxl,
             alignItems: 'center',
             justifyContent: "center"

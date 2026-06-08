@@ -89,7 +89,7 @@ const IconTextButton: React.FC<IconTextButtonProps> = ({
 
                     <Animated.Text style={{
                         color: color,
-                        fontSize: fontSize || SPACING.xl,
+                        fontSize: fontSize || SPACING.lg,
                         fontWeight: fontWeight,
                     }}>
                         {text}
@@ -98,7 +98,7 @@ const IconTextButton: React.FC<IconTextButtonProps> = ({
                     <Animated.View style={[{
                         backgroundColor: COLORS.background,
                         borderRadius: SPACING.xxxl,
-                        padding: SPACING.lg,
+                        padding: SPACING.xs,
                         justifyContent: 'center',
                         alignItems: 'center',
                     }]}>

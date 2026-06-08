@@ -7,6 +7,7 @@ interface TypewriterProps extends TextProps {
     started: boolean;
     style?: TextStyle;
     autoRepeat?: boolean;
+    onFinished?: () => void;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
@@ -15,6 +16,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
                                                    started,
                                                    speed = 100,
                                                    autoRepeat = false,
+                                                   onFinished,
                                                    style,
                                                    ...rest
                                                }) => {
@@ -44,19 +46,18 @@ const Typewriter: React.FC<TypewriterProps> = ({
             } else {
                 if (pauseTicks < maxPauseTicks) {
                     pauseTicks++;
-                }
-                else{
-                    if(textArray.length>1){
+                } else {
+                    if (textArray.length > 1) {
                         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textArray.length);
                         clearInterval(intervalId);
-                    }
-                    else if(autoRepeat){
-                        currentLength=0;
-                        pauseTicks=0;
+                    } else if (autoRepeat) {
+                        currentLength = 0;
+                        pauseTicks = 0;
                         setVisibleLength(0);
-                    }
-                    else{
+                    } else {
                         clearInterval(intervalId);
+                        if (onFinished)
+                            onFinished();
                     }
                 }
             }

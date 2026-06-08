@@ -34,10 +34,10 @@ const DashboardScreen = () => {
                 {/*Buttons*/}
                 <View style={styles.headerButtonContainer}>
                     <TouchableOpacity style={styles.circleButton}>
-                        <Bell size={30} color={COLORS.textSecondary}/>
+                        <Bell size={25} color={COLORS.textSecondary}/>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.circleButtonDisabled}>
-                        <LayoutList size={30} color={COLORS.textSecondary}/>
+                        <LayoutList size={25} color={COLORS.textSecondary}/>
                     </TouchableOpacity>
                 </View>
                 {/*Profile*/}
@@ -57,7 +57,7 @@ const DashboardScreen = () => {
                         </Text>
                         <Text style={{
                             color: COLORS.white,
-                            fontSize: SPACING.xl,
+                            fontSize: SPACING.lg,
                             fontWeight: '600'
                         }}>
                             HomiesLab
